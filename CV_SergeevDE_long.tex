@@ -1,0 +1,309 @@
+\documentclass[a4paper,10pt]{article}
+
+%
+% Useful Packages
+%
+\usepackage[english]{babel}
+\usepackage{datetime}
+\usepackage{marvosym}
+\usepackage{MnSymbol}
+\let\mathdollar\relax
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+\usepackage{tabu}
+
+%
+% Links
+%
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.1,0.3}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%
+% Fonts
+%
+%\defaultfontfeatures{Mapping=tex-text}
+%%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%%% modified for Karol Kozioł for ShareLaTeX use
+%\setmainfont[
+%SmallCapsFont = Fontin-SmallCaps.otf,
+%BoldFont = Fontin-Bold.otf,
+%ItalicFont = Fontin-Italic.otf
+%]
+%{Fontin.otf}
+%%%%
+
+% 
+% Column size for dates
+%
+\newlength{\mycol}
+\setlength{\mycol}{2.3cm} 
+
+%
+% Bibliography list
+%
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+        {\begin{enumerate}{}{%
+       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemsep}{\bibsep}%
+       \setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{enumerate}\vspace{-.6\baselineskip}}
+\makeatother
+
+%
+% Sections 
+% inspired by: http://stefano.italians.nl/archives/26
+%
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+\flushright{\small \texttt{Updated: \shortmonthname[\the\month] \the\year}}\flushleft
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Denis E. \textsc{Sergeev} \par
+		 \normalsize \textit{Curriculum vitae}
+		
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+\section{Personal Data}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabu} to \textwidth {r|X[l]}
+    \textsc{Place and Date of Birth:} & Moscow, Russia  | 03 July 1992 \\
+    \textsc{Address:}   & School of Environmental Sciences \newline University of East Anglia \newline Norwich Research Park \newline Norwich \newline NR47TJ \newline UK \\
+    \textsc{Phone:}     & +44 7518298358\\
+    \textsc{email:}     & \href{mailto:d.sergeev@uea.ac.uk}{d.sergeev@uea.ac.uk}
+\end{tabu}
+\renewcommand{\arraystretch}{1}
+
+ \renewcommand{\labelitemi}{\scriptsize$\blacksquare$} 
+
+\section{Research interests}
+\begin{itemize}
+ \item Polar lows dynamics
+ \item Atmospheric energetics
+ \item Planetary atmospheres
+ \item Planetary boundary layer
+ \item Carbon cycle modelling
+\end{itemize}
+
+\section{Education}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+ \textsc{2014--\small{Present}} & PhD in \textsc{Meteorology}\\
+& \textbf{School of Environmental Sciences} \\
+& \textbf{University of East Anglia, UK} \\
+& Thesis title: ``Dynamics and predictability of polar lows'' \\
+& Supervisor: \href{mailto:I.Renfrew@uea.ac.uk}{Ian A. Renfrew} \\
+\multicolumn{2}{c}{} \\
+ \textsc{2009--2014} & Specialist Diploma in \textsc{Meteorology}\\
+& \textbf{Faculty of Geography} \\
+& \textbf{Lomonosov Moscow State University, Russia} \\
+& With Honours \hfill | Average grade: 4.96/5 
+\\ %\hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams} \\ %\small\emph{magna cum laude}
+& Thesis title: ``Idealised numerical modelling of polar mesocyclones dynamics'' \\
+& Supervisor: \href{mailto:stepanen@srcc.msu.ru}{Victor M. Stepanenko}
+\end{tabu}
+
+\section{Research Experience}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+%\begin{tabular}{p{\mycol}|l}	
+ {\small Oct.} 2013 & \textbf{Visiting student} \\
+& Geophysical Institute, \\
+& University of Bergen, \\
+& Bergen, Norway \\
+& Supervisor: \href{mailto:thomas.spengler@gfi.uib.no}{Thomas Spengler}\\
+\multicolumn{2}{c}{} \\
+{\small Jul.} 2012 & \textbf{Research Assistant} \\
+& Laboratory of climate theory, \\
+& A.M. Obukhov Institute of Atmospheric Physics, \\
+& Russian Academy of Sciences \\
+& Moscow, Russia \\
+& Supervisor: \href{mailto:eliseev@ifaran.ru}{Alexey V. Eliseev}\\
+\end{tabu}
+
+\section{Professional Experience}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+ {\small Aug.--Sep.} 2013 & \textbf{Weather Forecaster} \\
+& Forecast and Briefing Service, \\
+& Main Aviation Meteorological Centre, \\
+& Vnukovo Airport, Moscow, Russia \\
+\multicolumn{2}{c}{} \\
+ {\small Jun.--Jul.} 2014 & \textbf{Translator} \\
+& Translation of documentation of meteorological equipment, \\
+& Retail and Consumer Merchandise 'Meteomaster', \\
+& Moscow, Russia
+\end{tabu}
+
+\section{Fieldwork Experience}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+ {\small Aug.} 2012 & \textbf{Field practice in meteorology} \\
+& Attempt to understanding of prevailing mesoscale processes through wind characteristic measurements and lake hydrothermodynamical modelling. \\
+& \textsc{Kronotsky National Reservation, Kamchatka pen., Russia}\\
+\multicolumn{2}{c}{} \\
+
+ {\small Jan.--Feb.} 2012 & \textbf{Field practice in meteorology} \\
+& Measurements of the convective boundary layer over the polynya. \\
+& \textsc{White Sea Biological Station, Karel Republic, Russia}\\
+\multicolumn{2}{c}{} \\
+
+ {\small Jun.--Jul.} 2011 & \textbf{Field practice in meteorology} \\
+& Basic field techniques in atmospheric sciences (profiling of atmosphere, study of atmospheric stratification and radiative measurements).  \\
+& \textsc{Khibiny mountains, Murmansk region, Russia}\\
+\multicolumn{2}{c}{} \\
+
+ {\small Jan.--Feb.} 2011 & \textbf{Field practice in meteorology} \\
+& Micrometeorological measurements, ice-breeze modelling. \\
+& \textsc{White Sea Biological Station, Karel Republic, Russia}\\
+\multicolumn{2}{c}{} \\
+
+ {\small Jun.--Jul.} 2010 & \textbf{Field practice in geographical studies} \\
+& Including: meteorology, hydrology, geomorphology, soil science, biogeography, topography. \\
+& \textsc{Kaluga region, Russia}
+\end{tabu}
+
+\section{Teaching Experience}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+	2010--2012 & \textbf{Website coordinator and teaching assistant} \\
+& \href{http://www.mioo.ru/}{Moscow Institute of Open Education} \\
+& Gave lessons on how to prepare to the Geography Olympiads \\
+& Worked with tests on geography and meteorology
+\end{tabu}
+
+\section{Journal Publications}
+\begin{bibsection}
+    \item Eliseev AV, {\bf Sergeev DE}. 2014. Impact of Subgrid Scale Vegetation Heterogeneity on the Simulation of Carbon Cycle Characteristics. \emph{Izvestiya, Atmospheric and Oceanic Physics}. \textbf{50(3):} 259--270.
+    \item {\bf Sergeev DE}, Zamyatina MY, Stepanenko VM. 2013. Thermal regime features of Kronotsky lake (in Russian). \emph{Kronotsky State Natural Biosphere Reserve Proceedings}. \textbf{3:} 29--41.
+\end{bibsection}
+
+\section{Conference Proceedings}
+\begin{bibsection}
+    \item {\bf Sergeev DE}, Stepanenko VM. 2013. Numerical modelling of polar mesocyclones generation mechanisms.\emph{International Conference 'Turbulence, atmosphere and climate dynamics' dedicated to A.M. Obukhov}. {\bf Selected papers}: 168--170.
+    \item {\bf Sergeev DE}, Stepanenko VM. 2012. Parameterization of mesoscale sensible heat and methane fluxes in the region of Western Siberia. \emph{International Conference and Early Career Scientists School on Environmental Observations, modelling and Information Systems (ENVIROMIS-2012)}. {\bf Selected papers}: 67--69.
+    \item {\bf Sergeev DE}, Stepanenko VM. 2012. Methodology of dynamical downscaling of meteorological fields and its verification in the region of Western Siberia. \emph{Proceedings of the XVI International Young Scientists School-Conference on Atmospheric Composition, Electricity and Climate Impacts (SATEP)}. {\bf Selected papers}: 182--184.
+    \item Barabanova OV, Fedorov GA, Khrupolova EA, Konstantinov PI, Kukanova EA, Malinina EP, {\bf Sergeev DE}, Sokolova LA, Stepanenko VM, Varentsov MV, Veresemskaya PS, Zamyatina MY, Zheleznova IV. 2012. Experimental investigation and remote sensing of boundary layer in high latitudes (evidence from the coastal zone of the White Sea). \emph{Proceedings of the International Youth Science Forum Lomonosov}.
+    \item Barabanova OV, Budaev ME, Debolskiy AV, Glebova ES, Kukanova EA, Melnik KO, Platonov VS,  {\bf Sergeev DE}, Varentsov MV, Zamyatina MY, Zhelesnova IV. 2011. The dynamics of the atmospheric boundary layer and its interaction with the underlying surface in the coastal zone of the White Sea. \emph{Proceedings of the International Youth Science Forum Lomonosov}.
+\end{bibsection}
+
+\section{Poster presentations}
+\begin{itemize} \renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
+    \item {\bf Sergeev DE}, Renfrew IA. 2015. Structure and dynamics of a shear-line polar low during a cold-air outbreak over the Norwegian Sea. Dynamics of Atmosphere-Ice-Ocean Interactions in the High Latitudes, 23--27 March, 2015 Rosendal, Norway.
+	\item {\bf Sergeev DE}, Stepanenko VM. 2014. Numerical modelling of polar mesocyclones dynamics diagnosed by energy budget. European Geosciences Union (EGU) General Assembly 2014, 28 April -- 02 May, Vienna, Austria.
+	\item Eliseev AV, {\bf Sergeev DE}. 2013. Impact of subgrid-scale vegetation heterogeneity on results of climate model simulation of carbon cycle. European Geosciences Union (EGU) General Assembly 2013, 07 -- 12 April, Vienna, Austria.
+	\item {\bf Sergeev DE}, Stepanenko VM. 2013. Numerical modelling of polar mesocyclones generation mechanisms. European Geosciences Union (EGU) General Assembly 2013, 07 -- 12 April, Vienna, Austria.
+\end{itemize}
+
+\section{Grants}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}	
+ 2014-2016 & \textbf{Characteristics of the mesoscale atmospheric circulations in the Arctic and their influence on the atmosphere-ocean energy exchange} \\
+& Russian Foundation for Basic Research (RFBR) Grant \\
+\multicolumn{2}{c}{} \\
+
+ 2014-2016 & \textbf{Carbon cycle in lake-atmosphere continuum: observations and modelling/Supercomputer modelling of multiscale interaction of turbulent atmospheric boundary layer with hydrologically heterogeneous Earth surface} \\
+& Russian Foundation for Basic Research (RFBR) Grant \\
+\multicolumn{2}{c}{} \\
+
+ 2013-2015 & \textbf{Modelling of a climate system response and associated biochemical changes of Arctic Ocean, due to intense destabilization of methane hydrates on Eastern Arctic shelf seas}\\
+& Russian Foundation for Basic Research (RFBR) Grant \\
+\multicolumn{2}{c}{} \\
+
+ 2013-2015 & \textbf{Multiscale modelling of turbulent atmospheric flow above sea surface with inhomogeneous ice cover}\\
+& Russian Foundation for Basic Research (RFBR) Grant \\
+\multicolumn{2}{c}{} \\
+
+ 2013-2015 & \textbf{Developing and verification of the mesoscale sensible heat and tracers fluxes over hydrologically inhomogeneous surface} \\ 
+& Grant of the President of Russian Federation
+\end{tabu}
+      
+\section{Scholarships and Awards}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}	
+ \textsc{2014-2017} & Lord Zuckerman scholarship
+                    \newline School of Environmental Sciences
+                    \newline University of East Anglia \\
+ \multicolumn{2}{c}{} \\
+ \textsc{2014} & Young Scientist's Travel Award (YSTA)
+                 \newline European Geosciences Union (EGU) General Assembly \\
+ \multicolumn{2}{c}{} \\
+ \textsc{2014} & Russian Academy of Sciences Young Scientist Medal
+                 \newline In the area of oceanology, atmospheric physics and geography
+\end{tabu}
+
+\section{Professional Activities}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}	
+ \textsc{2014--\small{Present}} & Member of Royal Meteorological Society
+\end{tabu}
+
+\section{Languages}
+\begin{tabular}{rp{10cm}}
+\textsc{Russian:} & Native speaker \\
+\textsc{English:} & Fluent (IELTS 8.0)\\
+\textsc{French:} & Reading Knowledge\\
+\end{tabular}
+
+\section{Computer skills}
+\begin{tabular}{rp{10cm}}
+	Operating systems & \textbf{Linux}, Unix, Windows \\
+	Computer Languages & \textbf{Python}, Fortran \\
+	Data analysis and visualizing & \textbf{Python}, MATLAB, NCL, VAPOR, GrADS, Surfer, Grapher, Voxler \\
+	Parallel programming in Fortran & MPI, OpenMP \\
+	Version control systems & Git, Subversion \\
+	Document preparation & \LaTeX, Microsoft Office \\
+\end{tabular}
+
+\section{Extra education and training}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+{\small 3--5 Dec} 2014 & \textbf{\href{http://cms.ncas.ac.uk/wiki/UmTraining}{Unified Model Training (by NCAS-CMS)}} \\
+& Introduction to The Met Office Unified Model, including the set-up interface, how to run the model and the outline of research that is being carried out using the model\\
+\multicolumn{2}{c}{}\\
+
+{\small Sep--Dec} 2011 & \textbf{\href{http://gcc.aos.ecu.edu/}{Global Climate Change course}} \\
+& Successfully completed Global Climate Change course taught by East Carolina University (USA) in partnership with Shandong University (China), Faculdade de Jaguariuna (Brazil), Moscow State University (Russia), TUD SUD America de Mexico (Mexico)
+\end{tabu}
+
+\vspace{.1in}
+Completed on-line \textbf{\href{https://www.meted.ucar.edu/}{MetEd}} modules:
+\begin{itemize} \renewcommand{\labelitemi}{\scriptsize$\blacksquare$} 
+        \item Topics in Polar Low Forecasting
+        \item Arctic Meteorology and Oceanography
+        \item Skew-T Mastery
+        \item Principles of Convection I: Buoyancy and CAPE
+        \item How Mesoscale Models Work
+        \item Jet Streams
+        \item Downscaling of NWP Data
+        \item Satellite Feature Identification: Cyclogenesis
+        \item The Balancing Act of Geostrophic Adjustment
+        \item Introduction to Statistics in Climatology
+        \item Monitoring the Climate System with Satellites
+\end{itemize}
+
+\vspace{.1in}
+Completed on-line \textbf{\href{http://www.intuit.ru/en/node/32/}{INTUIT}} courses:
+\begin{itemize} \renewcommand{\labelitemi}{\scriptsize$\blacksquare$} 
+        \item {\href{http://www.intuit.ru/sites/default/files/diploma/d/e/n/n/i/NOU__INTUIT_-2-699590-OLF.jpg}{Parallel Programming Using MPI Technologies}}
+        \item {\href{http://www.intuit.ru/sites/default/files/diploma/d/e/n/n/i/Nekommercheskoe_obrazovatelnoe_chastnoe_uchrejdenie_vyisshego_professionalnogo__obrazovaniya__Natsionalnyiy_otkryityiy_universitet__INTUIT_-2-790692-OLF.jpg}{Working with LaTeX}}
+\end{itemize}
+
+\vspace{.1in}
+\href{http://lomonosov.msu.ru/}{1st place in the Lomonosov Geography Olympiad} \\
+\href{http://rosolymp.ru/index.php?option=com_content&view=article&id=6455&Itemid=917}{3rd place in the All-Russian Geography Olympiad}
+
+\end{document}
