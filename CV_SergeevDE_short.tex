@@ -1,0 +1,180 @@
+\documentclass[a4paper,10pt]{article}
+
+%
+% Useful Packages
+%
+\usepackage[english]{babel}
+\usepackage{datetime}
+\usepackage{marvosym}
+\usepackage{MnSymbol}
+\let\mathdollar\relax
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+%\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+%\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+\usepackage{tabu}
+
+%
+% Links
+%
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.1,0.3}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%
+% Fonts
+%
+%\defaultfontfeatures{Mapping=tex-text}
+%%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%%% modified for Karol Kozioł for ShareLaTeX use
+%\setmainfont[
+%SmallCapsFont = Fontin-SmallCaps.otf,
+%BoldFont = Fontin-Bold.otf,
+%ItalicFont = Fontin-Italic.otf
+%]
+%{Fontin.otf}
+%%%%
+
+% 
+% Column size for dates
+%
+\newlength{\mycol}
+\setlength{\mycol}{2.3cm} 
+
+%
+% Bibliography list
+%
+\makeatletter
+\newlength{\bibhang}
+\setlength{\bibhang}{1em}
+\newlength{\bibsep}
+ {\@listi \global\bibsep\itemsep \global\advance\bibsep by\parsep}
+\newenvironment{bibsection}%
+        {\begin{enumerate}{}{%
+       \setlength{\leftmargin}{\bibhang}%
+       \setlength{\itemindent}{-\leftmargin}%
+       \setlength{\itemsep}{\bibsep}%
+       \setlength{\parsep}{\z@}%
+        \setlength{\partopsep}{0pt}%
+        \setlength{\topsep}{0pt}}}
+        {\end{enumerate}\vspace{-.6\baselineskip}}
+\makeatother
+
+%
+% Sections 
+% inspired by: http://stefano.italians.nl/archives/26
+%
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+\flushright{\small \texttt{Updated: \shortmonthname[\the\month] \the\year}}\flushleft
+
+%--------------------TITLE-------------
+\par{\centering
+		{\Huge Denis E. \textsc{Sergeev} \par
+		 \normalsize \textit{Curriculum vitae}
+		
+	}\bigskip\par}
+
+%--------------------SECTIONS-----------------------------------
+\section{Personal Data}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+    \textsc{Address:}   & 3.16 School of Environmental Sciences, University of East Anglia, Norwich,  NR47TJ, UK \\
+    \textsc{Phone:}     & +44 7518298358\\
+    \textsc{email:}     & \href{mailto:d.sergeev@uea.ac.uk}{d.sergeev@uea.ac.uk}
+\end{tabu}
+\renewcommand{\arraystretch}{1}
+
+ \renewcommand{\labelitemi}{\scriptsize$\blacksquare$} 
+
+\section{Education}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+ \textsc{2014--\small{Present}} & PhD in \textsc{Meteorology}\\
+& \textbf{School of Environmental Sciences} \\
+& \textbf{University of East Anglia, UK} \\
+& Thesis title: ``Dynamics and predictability of polar lows'' \\
+& Supervisor: \href{mailto:I.Renfrew@uea.ac.uk}{Ian A. Renfrew} \\
+& \quad tel.: +44 (0)1603 59 2557 \\
+& \quad e-mail: \href{mailto:i.renfrew@uea.ac.uk}{i.renfrew@uea.ac.uk} \\
+& \quad address: School of Environmental Sciences, University of East Anglia, Norwich NR47TJ, UK \\
+\multicolumn{2}{c}{} \\
+ \textsc{2009--2014} & Specialist Diploma in \textsc{Meteorology}\\
+& \textbf{Faculty of Geography} \\
+& \textbf{Lomonosov Moscow State University, Russia} \\
+& With Honours \hfill | Average grade: 4.96/5 
+\\ %\hyperlink{grds}{\hfill | \footnotesize Detailed List of Exams} \\ %\small\emph{magna cum laude}
+& Thesis title: ``Idealised numerical modelling of polar mesocyclones dynamics'' \\
+& Supervisor: \href{mailto:stepanen@srcc.msu.ru}{Victor M. Stepanenko}
+\end{tabu}
+
+\section{Research Experience}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+%\begin{tabular}{p{\mycol}|l}	
+ {\small Oct.} 2013 & \textbf{Visiting student} \\
+& Geophysical Institute, \\
+& University of Bergen, \\
+& Bergen, Norway \\
+& Supervisor: \href{mailto:thomas.spengler@gfi.uib.no}{Thomas Spengler}\\
+\multicolumn{2}{c}{} \\
+{\small Jul.} 2012 & \textbf{Research Assistant} \\
+& Laboratory of climate theory, \\
+& A.M. Obukhov Institute of Atmospheric Physics, \\
+& Russian Academy of Sciences \\
+& Moscow, Russia \\
+& Supervisor: \href{mailto:eliseev@ifaran.ru}{Alexey V. Eliseev}\\
+\end{tabu}
+
+\section{Reviewed Publications}
+\begin{bibsection}
+    \item Eliseev AV, {\bf Sergeev DE}. 2014. Impact of Subgrid Scale Vegetation Heterogeneity on the Simulation of Carbon Cycle Characteristics. \emph{Izvestiya, Atmospheric and Oceanic Physics}. \textbf{50(3):} 259--270.
+\end{bibsection}
+
+      
+\section{Scholarships and Awards}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}	
+ \textsc{2014-2017} & Lord Zuckerman scholarship
+                    \newline School of Environmental Sciences
+                    \newline University of East Anglia \\
+ \multicolumn{2}{c}{} \\
+ \textsc{2014} & Young Scientist's Travel Award (YSTA)
+                 \newline European Geosciences Union (EGU) General Assembly \\
+ \multicolumn{2}{c}{} \\
+ \textsc{2014} & Russian Academy of Sciences Young Scientist Medal
+                 \newline In the area of oceanology, atmospheric physics and geography
+\end{tabu}
+
+\section{Grants}
+\begin{tabu} to \textwidth {p{\mycol}|X[l]}	
+ 2014-2016 & \textbf{Characteristics of the mesoscale atmospheric circulations in the Arctic and their influence on the atmosphere-ocean energy exchange} \\
+& Russian Foundation for Basic Research (RFBR) Grant
+\end{tabu}
+
+\section{Languages}
+\begin{tabular}{rp{10cm}}
+\textsc{Russian:} & Native speaker \\
+\textsc{English:} & Fluent (IELTS 8.0)\\
+\textsc{French:} & Reading Knowledge\\
+\end{tabular}
+
+\section{Computer skills}
+\begin{tabular}{rp{10cm}}
+	Operating systems & \textbf{Linux}, Unix, Windows \\
+	Computer Languages & \textbf{Python}, Fortran \\
+	Data analysis and visualizing & \textbf{Python}, MATLAB, NCL, VAPOR, GrADS \\
+	Parallel programming in Fortran & MPI, OpenMP \\
+	Version control systems & Git, Subversion \\
+	Document preparation & \LaTeX, Microsoft Office \\
+	Web development & HTML, CSS (basic level)
+\end{tabular}
+
+\end{document}
