@@ -9,7 +9,7 @@
 \usepackage{MnSymbol}
 \let\mathdollar\relax
 \usepackage{fontspec} 					%for loading fonts
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+%\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 %\usepackage[big]{layaureo} 				%better formatting of the A4 page
@@ -18,6 +18,8 @@
 \usepackage{titlesec}					%custom \section
 
 \usepackage{tabu}
+
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
 %
 % Links
@@ -89,9 +91,10 @@
 \section{Personal Data}
 \renewcommand{\arraystretch}{1.2}
 \begin{tabu} to \textwidth {p{\mycol}|X[l]}
-    \textsc{Address:}   & School of Environmental Sciences \newline University of East Anglia \newline Norwich Research Park \newline Norwich \newline NR47TJ \newline UK \\
+    \textsc{Address:}   & School of Environmental Sciences \newline University of East Anglia \newline Norwich \newline NR47TJ \newline UK \\
     \textsc{Phone:}     & +44 7518298358\\
-    \textsc{email:}     & \href{mailto:d.sergeev@uea.ac.uk}{d.sergeev@uea.ac.uk}
+    \textsc{email:}     & \href{mailto:d.sergeev@uea.ac.uk}{d.sergeev@uea.ac.uk}\\
+    \textsc{website:}     & \href{http://dennissergeev.github.io}{dennissergeev.github.io}
 \end{tabu}
 \renewcommand{\arraystretch}{1}
 
@@ -101,9 +104,8 @@
 \begin{itemize}
  \item Polar lows dynamics
  \item Atmospheric energetics
- \item Planetary atmospheres
- \item Planetary boundary layer
- \item Carbon cycle modelling
+ \item Atmospheric boundary layers
+ \item Planetary meteorology
 \end{itemize}
 
 \section{Education}
@@ -186,15 +188,15 @@
 \end{itemize}
 \end{tabu}
 
-\section{Journal Publications}
+\section{Peer-reviewed Publications}
 \begin{bibsection}
     \item Eliseev AV, {\bf Sergeev DE}. 2014. Impact of Subgrid Scale Vegetation Heterogeneity on the Simulation of Carbon Cycle Characteristics. \emph{Izvestiya, Atmospheric and Oceanic Physics}. \textbf{50(3):} 259--270.
-    \item {\bf Sergeev DE}, Zamyatina MY, Stepanenko VM. 2013. Thermal regime features of Kronotsky lake (in Russian). \emph{Kronotsky State Natural Biosphere Reserve Proceedings}. \textbf{3:} 29--41.
 \end{bibsection}
 
-\section{Conference Proceedings}
+\section{Conference Proceedings and Non-reviewed Publications}
 \begin{bibsection}
     \item {\bf Sergeev DE}, Stepanenko VM. 2013. Numerical modelling of polar mesocyclones generation mechanisms.\emph{International Conference 'Turbulence, atmosphere and climate dynamics' dedicated to A.M. Obukhov}. {\bf Selected papers}: 168--170.
+    \item {\bf Sergeev DE}, Zamyatina MY, Stepanenko VM. 2013. Thermal regime features of Kronotsky lake (in Russian). \emph{Kronotsky State Natural Biosphere Reserve Proceedings}. \textbf{3:} 29--41.
     \item {\bf Sergeev DE}, Stepanenko VM. 2012. Parameterization of mesoscale sensible heat and methane fluxes in the region of Western Siberia. \emph{International Conference and Early Career Scientists School on Environmental Observations, modelling and Information Systems (ENVIROMIS-2012)}. {\bf Selected papers}: 67--69.
     \item {\bf Sergeev DE}, Stepanenko VM. 2012. Methodology of dynamical downscaling of meteorological fields and its verification in the region of Western Siberia. \emph{Proceedings of the XVI International Young Scientists School-Conference on Atmospheric Composition, Electricity and Climate Impacts (SATEP)}. {\bf Selected papers}: 182--184.
     \item Barabanova OV, Fedorov GA, Khrupolova EA, Konstantinov PI, Kukanova EA, Malinina EP, {\bf Sergeev DE}, Sokolova LA, Stepanenko VM, Varentsov MV, Veresemskaya PS, Zamyatina MY, Zheleznova IV. 2012. Experimental investigation and remote sensing of boundary layer in high latitudes (evidence from the coastal zone of the White Sea). \emph{Proceedings of the International Youth Science Forum Lomonosov}.
@@ -213,7 +215,7 @@
       
 \section{Scholarships and Awards}
 \begin{tabu} to \textwidth {p{\mycol}|X[l]}	
- \textsc{2014-2017} & Lord Zuckerman scholarship
+ \textsc{2014-2018} & Lord Zuckerman scholarship
                     \newline School of Environmental Sciences
                     \newline University of East Anglia \\
  \multicolumn{2}{c}{} \\
@@ -309,11 +311,14 @@
 
 \vspace{.1in}
 Completed on-line \textbf{\href{https://www.meted.ucar.edu/}{MetEd}} modules:
+
+\begin{small}
 \begin{itemize}
         \item Topics in Polar Low Forecasting
         \item Arctic Meteorology and Oceanography
         \item Skew-T Mastery
-        \item Principles of Convection I: Buoyancy and CAPE
+        \item Principles of Convection: Buoyancy and CAPE
+        \item Using Scatterometer Wind and Altimeter Wave Estimates in Marine Forecasting
         \item How Mesoscale Models Work
         \item Jet Streams
         \item Downscaling of NWP Data
@@ -322,6 +327,7 @@ Completed on-line \textbf{\href{https://www.meted.ucar.edu/}{MetEd}} modules:
         \item Introduction to Statistics in Climatology
         \item Monitoring the Climate System with Satellites
 \end{itemize}
+\end{small}
 
 \vspace{.1in}
 Completed on-line \textbf{\href{https://www.coursera.org}{Coursera}} courses:
