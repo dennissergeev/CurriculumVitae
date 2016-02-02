@@ -8,8 +8,8 @@
 \usepackage{marvosym}
 \usepackage{MnSymbol}
 \let\mathdollar\relax
-\usepackage{fontspec} 					%for loading fonts
-%\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\usepackage{fontspec}				%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
 %\usepackage[big]{layaureo} 				%better formatting of the A4 page
@@ -31,16 +31,8 @@
 %
 % Fonts
 %
-%\defaultfontfeatures{Mapping=tex-text}
-%%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
-%%%% modified for Karol Kozioł for ShareLaTeX use
-%\setmainfont[
-%SmallCapsFont = Fontin-SmallCaps.otf,
-%BoldFont = Fontin-Bold.otf,
-%ItalicFont = Fontin-Italic.otf
-%]
-%{Fontin.otf}
-%%%%
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont [Ligatures={Common}, Numbers={OldStyle}, Variant=01]{Linux Libertine O}
 
 % 
 % Column size for dates
@@ -71,8 +63,8 @@
 % Sections 
 % inspired by: http://stefano.italians.nl/archives/26
 %
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
+\titleformat{\section}{\LARGE\scshape\raggedright}{}{0em}{}[]
+\titlespacing{\section}{0pt}{20pt}{10pt}
 
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
@@ -90,7 +82,7 @@
 %--------------------SECTIONS-----------------------------------
 \section{Personal Data}
 \renewcommand{\arraystretch}{1.2}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+\begin{tabu} to \textwidth {p{\mycol}X[l]}
     \textsc{Address:}   & School of Environmental Sciences \newline University of East Anglia \newline Norwich \newline NR47TJ \newline UK \\
     \textsc{Phone:}     & +44 7518298358\\
     \textsc{email:}     & \href{mailto:d.sergeev@uea.ac.uk}{d.sergeev@uea.ac.uk}\\
@@ -110,7 +102,7 @@
 \end{itemize}
 
 \section{Education}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+\begin{tabu} to \textwidth {p{\mycol}X[l]}
  \textsc{2014--\small{Present}} & PhD in \textsc{Meteorology}\\
 & \textbf{School of Environmental Sciences} \\
 & \textbf{University of East Anglia, UK} \\
@@ -127,7 +119,7 @@
 \end{tabu}
 
 \section{Research Experience}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+\begin{tabu} to \textwidth {p{\mycol}X[l]}
 %\begin{tabular}{p{\mycol}|l}	
  {\small Oct.} 2013 & \textbf{Visiting student} \\
 & Geophysical Institute, \\
@@ -144,7 +136,7 @@
 \end{tabu}
 
 \section{Fieldwork Experience}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+\begin{tabu} to \textwidth {p{\mycol}X[l]}
  {\small Aug.} 2012 & \textbf{Field practice in meteorology} \\
 & Attempt to understanding of prevailing mesoscale processes through wind characteristic measurements and lake hydrothermodynamical modelling. \\
 & \textsc{Kronotsky National Reservation, Kamchatka pen., Russia}\\
@@ -171,12 +163,14 @@
 \end{tabu}
 
 \section{Teaching Experience}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+\begin{tabu} to \textwidth {p{\mycol}X[l]}
 2015--\small{Present} & \textbf{Teaching assistance} \\
 & University of East Anglia \\
 & In courses: 
 \begin{itemize}
 \item Meteorology
+\item Modelling Environmental Processes
+\item Numerical Skills for Scientists
 \item Physical and Chemical Processes in Earth's System
 \end{itemize} \\
 \multicolumn{2}{c}{} \\
@@ -215,7 +209,7 @@
 
       
 \section{Scholarships and Awards}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+\begin{tabu} to \textwidth {p{\mycol}X[l]}
  \textsc{2015} & Travel Award
                   \newline Dynamics of Atmosphere-Ice-Ocean Interactions in the High Latitudes workshop\\
  \multicolumn{2}{c}{} \\
@@ -231,7 +225,7 @@
 \end{tabu}
 
 \section{Grants}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}	
+\begin{tabu} to \textwidth {p{\mycol}X[l]}	
  2014-2016 & \textbf{Characteristics of the mesoscale atmospheric circulations in the Arctic and their influence on the atmosphere-ocean energy exchange} \\
 & Russian Foundation for Basic Research (RFBR) Grant \\
 \multicolumn{2}{c}{} \\
@@ -245,12 +239,12 @@
 \end{tabu}
 
 \section{Memberships}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}	
+\begin{tabu} to \textwidth {p{\mycol}X[l]}	
  \textsc{2014--\small{Present}} & Member of Royal Meteorological Society
 \end{tabu}
 
 \section{Outreach}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}	
+\begin{tabu} to \textwidth {p{\mycol}X[l]}	
  \textsc{2015--\small{Present}} & Contributor to \href{http://www.climatesnack.com/}{ClimateSnack} blogging platform \\
 & My blog posts:
 \begin{itemize}
@@ -259,7 +253,12 @@
 \end{tabu}
 
 \section{Other Professional Experience}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+\begin{tabu} to \textwidth {p{\mycol}X[l]}
+ 2015--{\small Present} & \textbf{Python group coordinator} \\
+& Managing an informal group of Python-users at University of East Anglia \\
+& Website: \href{Python Group UEA}{http://ueapy.github.io} \\
+\multicolumn{2}{c}{} \\
+
  {\small Mar.} 2015 & \textbf{Rapporteur} \\
 & Dynamics of Atmosphere-Ice-Ocean Interactions in the High-Latitudes workshop \\
 & Rosendal, Norway \\
@@ -278,10 +277,10 @@
 \end{tabu}
 
 \section{Languages}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+\begin{tabu} to \textwidth {p{\mycol}X[l]}
 \textsc{Russian:} & Native speaker \\
 \textsc{English:} & Fluent (IELTS 8.0)\\
-\textsc{French:} & Reading Knowledge\\
+\textsc{French:} & Intermediate \\
 \end{tabu}
 
 \section{Computer skills}
@@ -296,7 +295,7 @@
 \end{tabular}
 
 \section{Extra education and training}
-\begin{tabu} to \textwidth {p{\mycol}|X[l]}
+\begin{tabu} to \textwidth {p{\mycol}X[l]}
 {\small 3--5 Dec} 2014 & \textbf{\href{http://cms.ncas.ac.uk/wiki/UmTraining}{Unified Model Training (by NCAS-CMS)}} \\
 & Introduction to The Met Office Unified Model, including the set-up interface, how to run the model and the outline of research that is being carried out using the model\\
 \multicolumn{2}{c}{}\\
